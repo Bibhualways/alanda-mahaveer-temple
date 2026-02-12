@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ଆଲନ୍ଦା ମହାବୀର ମନ୍ଦିର</title>
+
+<style>
+body{margin:0;font-family:sans-serif;background:#fff3e0;color:#333;}
+header{background:linear-gradient(45deg,#ff5722,#d50000);color:white;text-align:center;padding:30px 10px;}
+section{background:white;margin:12px;padding:18px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.2);}
+h2{color:#d84315;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px;}
+footer{background:#ff5722;color:white;text-align:center;padding:15px;}
+.button{display:inline-block;background:red;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;margin-top:10px;}
+.countdown{font-size:20px;color:red;font-weight:bold;}
+.qr{display:flex;justify-content:center;}
+.qr img{width:200px;border-radius:10px;}
+iframe{width:100%;height:250px;border:0;border-radius:10px;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚩 ଆଲନ୍ଦା ଶ୍ରୀ ମହାବୀର ମନ୍ଦିର 🚩</h1>
+<p>ପ୍ରତିଷ୍ଠା ଉତ୍ସବ</p>
+<p class="countdown" id="timer"></p>
+</header>
+
+<section>
+<h2>🙏 ଶ୍ରୀ ହନୁମାନ୍ ବନ୍ଦନା</h2>
+<p>
+ମନୋଜବଂ ମାରୁତତୁଲ୍ୟବେଗଂ<br>
+ଜିତେନ୍ଦ୍ରିୟଂ ବୁଦ୍ଧିମତାଂ ବରିଷ୍ଠମ୍<br>
+ବାତାତ୍ମଜଂ ବାନରୟୂଥମୁଖ୍ୟଂ<br>
+ଶ୍ରୀରାମଦୂତଂ ଶରଣଂ ପ୍ରପଦ୍ୟେ ॥
+</p>
+</section>
+
+<section>
+<h2>📅 ଉତ୍ସବ ବିବରଣୀ</h2>
+<p>
+ପଣା ସଂକ୍ରାନ୍ତି ଓ ଓଡ଼ିଆ ନବବର୍ଷ ଅବସରରେ  
+ମହାବୀର ମନ୍ଦିର ପ୍ରତିଷ୍ଠା ଉତ୍ସବ ପାଳନ କରାଯିବ।
+</p>
+</section>
+
+<section>
+<h2>📸 ମନ୍ଦିର ଗ୍ୟାଲେରୀ</h2>
+<div class="gallery">
+<img src="temple1.jpg">
+<img src="temple2.jpg">
+<img src="temple3.jpg">
+<img src="mahaveer.jpg">
+</div>
+<p>📌 ନୋଟ: ଏହି ଫଟୋଗୁଡିକୁ ଆପଣ ନିଜ ମନ୍ଦିର ଫଟୋ ସହ ବଦଳାନ୍ତୁ।</p>
+</section>
+
+<section>
+<h2>🤝 ସହଯୋଗ / ଦାନ</h2>
+<p>ଉତ୍ସବ ପାଇଁ ଆପଣଙ୍କର ଅର୍ଥିକ ସହଯୋଗ ଆମକୁ ସହାୟତା କରିବ।</p>
+<div class="qr">
+<img src="donation-qr.png">
+</div>
+<p style="text-align:center;">📌 ନିଜ UPI QR କୋଡ୍ ଏଠାରେ ଯୋଡନ୍ତୁ</p>
+</section>
+
+<section>
+<h2>📍 ମନ୍ଦିର ଅବସ୍ଥିତି</h2>
+<iframe src="https://maps.google.com/maps?q=puri%20odisha&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<section style="text-align:center;">
+<h2>📞 ସମ୍ପର୍କ</h2>
+<a class="button" href="https://wa.me/91XXXXXXXXXX">WhatsApp ସମ୍ପର୍କ</a>
+</section>
+
+<footer>
+🚩 ଜୟ ଶ୍ରୀ ମହାବୀର 🚩<br>
+ଆଲନ୍ଦା ମନ୍ଦିର କମିଟି
+</footer>
+
+<script>
+var eventDate = new Date("April 14, 2026 00:00:00").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = eventDate - now;
+
+var days = Math.floor(distance / (1000*60*60*24));
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+var seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("timer").innerHTML =
+"ଉତ୍ସବ ଆରମ୍ଭ ହେବାକୁ: " +
+days + " ଦିନ " + hours + " ଘଣ୍ଟା " +
+minutes + " ମିନିଟ " + seconds + " ସେକେଣ୍ଡ";
+
+if(distance < 0){
+clearInterval(x);
+document.getElementById("timer").innerHTML = "ଉତ୍ସବ ଆରମ୍ଭ ହୋଇଛି!";
+}
+},1000);
+</script>
+
+</body>
+</html>
